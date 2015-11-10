@@ -4,21 +4,34 @@ class Card:
         self.suit = suit
 
     def getRank(self):
-        theRank = self.rank
+        ### Make the card rank lowercase so I don't have to worry about all
+        ### the possibilities of capitalization
+        
+        theRank = self.rank.lower()
+
+
+        ### Create a dictionary for all the possible card values and their
+        ### corresponding numerical value
         switch = {
-            "Ace": 14,
-            "King": 13,
-            "Queen": 12,
-            "Jack": 11,
-            "Ten": 10,
-            "Nine": 9,
-            "Eight": 8,
-            "Seven": 7,
-            "Six": 6,
-            "Five": 5,
-            "Four": 4,
-            "Three": 3,
-            "Two": 2
+            "ace": 14,
+            "king": 13,
+            "queen": 12,
+            "jack": 11,
+            "ten": 10,
+            "nine": 9,
+            "eight": 8,
+            "seven": 7,
+            "six": 6,
+            "five": 5,
+            "four": 4,
+            "three": 3,
+            "two": 2
         }
 
-        return switch.get(self.rank, "Error")
+        return switch.get(theRank, "Error")
+
+    def setRank(self, newRank):
+        ### Temporary method for quicker troubleshooting to test the getRank
+        ### method on all of the possibilities
+
+        self.rank = newRank
