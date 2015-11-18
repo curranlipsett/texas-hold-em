@@ -1,21 +1,8 @@
-from Card import Card
+from Card import *
 
-x = Card("Five", "Hearts")
-y = Card("Ace", "Hearts")
+myDeck = Deck()
 
-if x.getRank() > y.getRank():
-	print("True")
-elif x.getRank() < y.getRank():
-	print("False")
-else:
-	print("Equal")
+print(myDeck.numCards)
 
-x.setRank("Six")
-y.setRank("Six")
-
-if x.getRank() > y.getRank():
-   print("True")
-elif x.getRank() < y.getRank():
-   print("False")
-else:
-	print("Equal")
+for i in range(myDeck.numCards):
+	print myDeck.getCard(i).getRank()
