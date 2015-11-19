@@ -1,8 +1,11 @@
 from Card import *
+from Deck import *
 
 myDeck = Deck()
 
-print(myDeck.numCards)
+card = myDeck.cards[0]
 
-for i in range(myDeck.numCards):
-	print myDeck.getCard(i).getRank()
+print str(card) 
+
+print str(myDeck)
+
