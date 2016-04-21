@@ -22,8 +22,8 @@ class Card:
        ### Create a dictionary for all the possible card values and their
        ### corresponding numerical value
 	switch = {
-	"ace": 14,
-	"king": 13,
+	 "ace": 14,
+	 "king": 13,
          "queen": 12,
          "jack": 11,
          "ten": 10,
